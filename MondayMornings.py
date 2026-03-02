@@ -9,8 +9,8 @@ import shutil
 import os
 import convert_opendcs_waves
 
-startdate = '20260202'
-enddate = '20260209'
+startdate = '20260223'
+enddate = '20260302'
 
 # =============================================================================
 #            LinkComm
@@ -130,6 +130,30 @@ shutil.copyfile(os.path.join(BASE_FOLDER, new_filename), os.path.join(ostepdir, 
 #convert_opendcs_waves.convert_opendcs_waves('pamessages.txt')
 #new_filename = 'PA_' + startdate + '_' + enddate + '_waves.csv'
 #os.rename(os.path.join(BASE_FOLDER, 'pamessages.csv'), os.path.join(BASE_FOLDER, new_filename))
+
+
+# =============================================================================
+#            DataShare
+# =============================================================================
+
+import sys
+import shutil
+import os
+sys.path.append(r'G:\My Drive\UsefulScripts\HourlyWavesFetch')
+import run_waves
+run_waves.run_station('99999291')
+run_waves.run_station('99999351')
+
+
+
+
+
+
+
+
+
+
+
 
 
 # =============================================================================

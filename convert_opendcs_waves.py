@@ -43,6 +43,7 @@ def get_message(file_to_use):
     station_id = None
     
     for d in data:
+        print(d)
         d = str(d).replace("error", "nan")
         data_sample = d.split("|")
         temp.append(float(data_sample[18].strip()))
