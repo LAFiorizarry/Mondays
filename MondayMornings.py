@@ -141,19 +141,20 @@ import shutil
 import os
 sys.path.append(r'G:\My Drive\UsefulScripts\HourlyWavesFetch')
 import run_waves
-run_waves.run_station('99999291')
-run_waves.run_station('99999351')
+new_filename = run_waves.run_station('99999291')
+BASE_FOLDER = 'G:\My Drive\Projects\MWWL_Waves\DataStore\99999291'
+mydir = r'G:\My Drive\Projects\MWWL_Waves\FieldTestData\PortAransas\raw_Waves_CSV'
+ostepdir = r'G:\Shared drives\NOS CO-OPS OSTEP\OSTEP_DATA\Waves\MWWL_Waves\FieldTestData\PortAransas\raw_Waves_CSV'
+shutil.copyfile(os.path.join(BASE_FOLDER, new_filename), os.path.join(mydir, new_filename))
+shutil.copyfile(os.path.join(BASE_FOLDER, new_filename), os.path.join(ostepdir, new_filename))
 
 
-
-
-
-
-
-
-
-
-
+new_filename = run_waves.run_station('99999351')
+BASE_FOLDER = 'G:\My Drive\Projects\MWWL_Waves\DataStore\99999351'
+mydir = r'G:\My Drive\Projects\MWWL_Waves\FieldTestData\CBBT\raw_Waves_CSV'
+ostepdir = r'G:\Shared drives\NOS CO-OPS OSTEP\OSTEP_DATA\Waves\MWWL_Waves\FieldTestData\CBBT\raw_Waves_CSV'
+shutil.copyfile(os.path.join(BASE_FOLDER, new_filename), os.path.join(mydir, new_filename))
+shutil.copyfile(os.path.join(BASE_FOLDER, new_filename), os.path.join(ostepdir, new_filename))
 
 
 # =============================================================================
